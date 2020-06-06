@@ -1,0 +1,60 @@
+<html>
+<title>Rytmi.cf</title>
+<body style=" background-color: chartreuse;">
+
+
+<h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">RYTMI.CF</h1>
+
+
+
+
+
+<style>
+    .btn2 {
+        visibility: hidden;
+    }
+</style>
+
+
+
+
+
+
+
+    <button class="nappi1" style="width: 25%; margin-left: 37%; margin-right: 37%; height: 10%;" onclick="musrnmselect()">Play Now!</button>
+   
+    <p style="text-align: center; font-size: 30px;" id="demo"></p>
+    <button id="demo2" style=" background-color: transparent; border-width: 0px;  width: 100%; height: 100px; color: rgb(255, 0, 0); margin-left:auto;margin-right:auto;display:block;   text-align: center; font-size: 30px;" id="demo2" onclick="window.location.href='game.html'"></button>
+
+ 
+
+    <script>
+
+
+
+
+        function musrnmselect() {
+          var txt;
+          var person = prompt("Your username:", "");
+          if (person == null || person == "") {
+            txt = "Please enter username to start the game!";
+          } else {
+            txt = "Hello " + person + "! Ready to play???";
+            txt2 = "Yes! Let's play!";
+            
+
+          }
+          document.getElementById("demo").innerHTML = txt;
+          document.getElementById("demo2").innerHTML = txt2;
+        }
+
+        </script>
+        <script>
+            function func2() {
+                
+            }
+        </script>
+        
+    <p style="position: absolute; bottom: 0; left: 0;">© omegames, 2020</p>
+</body>
+</html>

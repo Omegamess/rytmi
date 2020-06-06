@@ -1,0 +1,83 @@
+<html>
+    <title>Rytmi.cf</title>
+    <body style="  cursor:none; background-color: tomato;">
+
+
+<img id="airplain1" src="https://lh3.google.com/u/0/d/13-6Z64wIA0A8AWAzOX4uEnqeqAqOZg8C=w1280-h689-iv1" width="150px;" height="150px;" >
+
+
+
+
+<style>
+    #airplain1 {
+    
+        display: block;
+        top: 50%;
+        left: 50%;
+        margin-left: -75px;
+        margin-top: -75px;
+        position: absolute;
+    }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var element = document.getElementById("airplain1");
+    var posX = element.offsetLeft;
+    var posY = element.offsetTop;
+
+    document.addEventListener("keydown", function onPress(event) {
+      if (event.key === "ArrowLeft" || event.key === "a") {
+        liikuVaaka(false);
+      } else if (event.key === "ArrowRight" || event.key === "d") {
+        liikuVaaka(true);
+      } else if (event.key === "ArrowUp" || event.key === "w") {
+        liikuPysty(true);
+      } else if (event.key === "ArrowDown" || event.key === "s") {
+        liikuPysty(false);
+      }
+    });
+
+    function liikuVaaka(oikea = true) {
+      if (oikea && posX < window.innerWidth - 150) {
+        element.style.transform = 'rotate(0deg)';
+        posX += 10;
+        element.style.left = posX + 'px';
+      } else if (!oikea && posX > 0) {
+        element.style.transform = 'rotate(180deg)';
+        posX -= 10;
+        element.style.left = posX + 'px';
+      }
+    }
+
+    function liikuPysty(ylös = true) {
+      if (ylös && posY > 0) {
+        element.style.transform = 'rotate(-90deg)';
+        posY -= 10;
+        element.style.top = posY + 'px';
+      } else if (!ylös && posY < window.innerHeight - 150) {
+        element.style.transform = 'rotate(90deg)';
+        posY += 10;
+        element.style.top = posY + 'px';
+      }
+    }
+  </script>
+
+
+
+
+    </body>
+</html>
