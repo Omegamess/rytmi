@@ -5,7 +5,7 @@
     alert('YOu can move that ball with A,S,D,W  OR  ←,→,↑,↓     Happy gaming!')
         </script>
 <div id="airplain1">
-    <p>© omegames, 2020</p>
+    © omegames, 2020
 <img id="imagewithcopyrightsomegames2020" src="https://lh3.google.com/u/0/d/13-6Z64wIA0A8AWAzOX4uEnqeqAqOZg8C=w1280-h689-iv1" width="150px;" height="150px;" >
         </div>
 
@@ -55,7 +55,7 @@
     });
 
     function liikuVaaka(oikea = true) {
-      if (oikea && posX < window.innerWidth - 150) {
+      if (oikea && posX < window.innerWidth 0) {
         element.style.transform = 'rotate(0deg)';
         posX += 10;
         element.style.left = posX + 'px';
@@ -68,11 +68,11 @@
 
     function liikuPysty(ylös = true) {
       if (ylös && posY > 0) {
-        element.style.transform = 'rotate(-90deg)';
+        element.style.transform = 'rotate(0deg)';
         posY -= 10;
         element.style.top = posY + 'px';
       } else if (!ylös && posY < window.innerHeight - 150) {
-        element.style.transform = 'rotate(90deg)';
+        element.style.transform = 'rotate(0deg)';
         posY += 10;
         element.style.top = posY + 'px';
       }
